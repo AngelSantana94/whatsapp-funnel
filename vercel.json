@@ -1,9 +1,11 @@
 {
   "version": 2,
   "builds": [
-    { "src": "api/index.py", "use": "@vercel/python" }
+    { "src": "api/index.py", "use": "@vercel/python" },
+    { "src": "api/check_pending.py", "use": "@vercel/python" }
   ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "api/index.py" }
+    { "src": "/api/webhook", "dest": "api/index.py" },
+    { "src": "/api/check_pending", "dest": "api/check_pending.py" }
   ]
 }
