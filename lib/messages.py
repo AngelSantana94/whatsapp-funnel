@@ -8,7 +8,7 @@
 # references them.
 # -----------------------------------------------------------------------
 
-WEBSHOP_LINK = "[LINK WEBSHOP]"          # replace with the real shop URL
+WEBSHOP_LINK = "https://www.ziarnutrition.com"          # replace with the real shop URL
 DISCOUNT_CODE = "ZIAR10"
 
 # =========================================================================
@@ -118,46 +118,58 @@ def get_sales_message(visit_count: int) -> str:
 # =========================================================================
 OPTIN_QUESTION_BY_VISIT = {
     1: (
-        "Hi! We hopen dat je een goede eerste indruk hebt gekregen van "
-        "onze webshop en onze missie.\n\n"
-        "Omdat je nieuw bent bij Ziar Nutrition, zouden we het "
-        "supergezellig vinden om jou vanaf nu te inspireren met handige "
-        "sporttips, updates en exclusieve acties! Mogen we jou af en toe "
-        "een appje sturen?\n\n"
+        "Hi! 👋\n\n"
+        "We hopen dat je een goede eerste indruk hebt gekregen van onze webshop en onze missie.\n\n"
+        "Omdat je nieuw bent bij Ziar Nutrition, vinden we het leuk om je te inspireren met:\n\n"
+        "💪 Handige sporttips en updates over onze producten\n"
+        "🎁 Exclusieve acties en kortingen\n\n"
+        "Mogen we je af en toe een WhatsApp-bericht sturen?\n\n"
         "Antwoord met JA of NEE (of gebruik de knoppen hieronder)."
     ),
     2: (
-        "Hi! We hopen dat je een goede match hebt gevonden voor jouw "
-        "sportdoelen op de webshop.\n\n"
-        "We zouden het super gezellig vinden om jou handige tips, updates "
-        "en exclusieve acties te sturen! Mogen we jou af en toe een appje "
-        "sturen?\n\n"
-        "Antwoord met JA of NEE (of gebruik de knoppen hieronder)."
+        "Hi! 👋\n\n"
+    "Je hebt onze webshop al een tweede keer bezocht.\n\n"
+    "We zouden het leuk vinden om je op de hoogte te houden van:\n\n"
+    "💪 Handige sporttips en updates over onze producten\n"
+    "🎁 Exclusieve acties en kortingen\n\n"
+    "Zo mis je geen enkele update of voordeel.\n\n"
+    "Mogen we je af en toe een WhatsApp-bericht sturen?\n\n"
+    "Antwoord met JA of NEE (of gebruik de knoppen hieronder)."
     ),
     3: (
-        "Hi! Je hebt inmiddels een heel goed beeld van onze webshop en wat "
-        "we voor jouw doelen kunnen betekenen.\n\n"
-        "Omdat je een trouwe bezoeker bent, willen we je in de toekomst "
-        "direct als eerste op de hoogte stellen van geheime kortingsacties, "
-        "nieuwe voorraden en unieke sporttips. Mogen we jou op deze manier "
-        "af en toe een appje sturen?\n\n"
-        "Antwoord met JA of NEE (of gebruik de knoppen hieronder)."
+        "Hi! 👋\n\n"
+    "Je hebt inmiddels een goed beeld van onze webshop en wat we voor "
+    "jouw doelen kunnen betekenen.\n\n"
+    "Daarom willen we je graag als eerste op de hoogte houden van:\n\n"
+    "🎁 Exclusieve kortingsacties\n"
+    "🚀 Nieuwe producten en voorraden\n"
+    "💪 Handige sport- en gezondheidstips\n\n"
+    "Zo mis je geen belangrijke updates of voordelen.\n\n"
+    "Mogen we je af en toe een WhatsApp-bericht sturen?\n\n"
+    "Antwoord met JA of NEE (of gebruik de knoppen hieronder)."
     ),
     4: (
-        "Hi! Je kent ons assortiment inmiddels door en door.\n\n"
-        "Omdat je vaak interesse toont, willen we je graag toevoegen aan "
-        "onze exclusieve VIP-lijst. Zo mis je nooit onze geheime "
-        "kortingsacties, vroege toegang tot nieuwe producten en beste "
-        "sporttips. Mogen we jou af en toe een appje sturen?\n\n"
-        "Antwoord met JA of NEE (of gebruik de knoppen hieronder)."
+            "Hi! 👋\n\n"
+    "We zien dat je regelmatig interesse toont in onze producten.\n\n"
+    "Daarom nodigen we je graag uit voor onze exclusieve VIP-lijst.\n\n"
+    "Als VIP ontvang je als eerste:\n\n"
+    "🎁 Exclusieve kortingsacties en Vroegtijdige toegang tot nieuwe producten\n"
+    "💪 Handige sport- en gezondheidstips\n\n"
+    "Zo mis je geen enkele update of voordeel.\n\n"
+    "Mogen we je af en toe een WhatsApp-bericht sturen?\n\n"
+    "Antwoord met JA of NEE (of gebruik de knoppen hieronder)."
     ),
     5: (
-        "Hi! Je kent ons och onze webshop inmiddels door en door.\n\n"
-        "Omdat je een van onze meest actieve bezoekers bent, willen we je "
-        "absoluut in onze binnencirkel houden. Zo mis je nooit onze "
-        "geheime kortingsacties en vroege lanceringen. Mogen we jou af en "
-        "toe een appje sturen?\n\n"
-        "Antwoord met JA of NEE (of gebruik de knoppen hieronder)."
+        "Hi! 👋\n\n"
+    "Je bent inmiddels één van onze meest actieve bezoekers.\n\n"
+    "Daarom nodigen we je graag uit voor onze exclusieve binnencirkel.\n\n"
+    "Als lid ontvang je als eerste:\n\n"
+    "🎁 Exclusieve kortingsacties\n"
+    "🚀 Vroege toegang tot nieuwe producten\n"
+    "💪 Handige sport- en gezondheidstips\n\n"
+    "Zo mis je geen enkele update of voordeel.\n\n"
+    "Mogen we je af en toe een WhatsApp-bericht sturen?\n\n"
+    "Antwoord met JA of NEE (of gebruik de knoppen hieronder)."
     ),
 }
 
@@ -177,27 +189,43 @@ OPTIN_BUTTONS = [
 # STEP 3 — REPLY AFTER THE CUSTOMER CHOOSES (same text for every visit#)
 # =========================================================================
 OPTIN_YES_REPLY = (
-    "Tof dat we je mogen updaten en een appje mogen sturen voor nieuws van "
-    "onze producten en gezonde tips! Je hoeft nu niets meer te doen. Veel "
-    f"succes met shoppen op de webshop met je 10% kortingscode "
-    f"({DISCOUNT_CODE})! Tot snel!"
+    "Geweldig! 🎉\n\n"
+    "Tof dat we je mogen updaten en af en toe een appje mogen sturen met "
+    "nieuws over onze producten en handige gezonde tips.\n\n"
+    "Je hoeft nu niets meer te doen.\n\n"
+    f"🎁 Vergeet niet je 10% welkomstkorting te gebruiken met de code:\n"
+    f"{DISCOUNT_CODE}\n\n"
+    "🛒 Veel succes met shoppen op onze webshop!\n\n"
+    "❓ Heb je vragen of wil je persoonlijk advies over onze producten? "
+    "Stuur ons gerust een WhatsApp-bericht via +31 6 15717980. "
+    "We helpen je graag verder.\n\n"
+    "Tot snel! 👋"
 )
 
 OPTIN_NO_REPLY = (
-    "Jammer, maar dat respecteren we natuurlijk helemaal! Geen zorgen, we "
-    "vallen je niet lastig. Moest je in de toekomst van gedachten "
-    "veranderen? Stuur dan simpelweg het woord AANMELDEN en we sturen je "
-    "weer terug updates.\n\n"
-    f"Geniet in ieder geval van je 10% korting op de webshop: {WEBSHOP_LINK}"
+    "Jammer, maar dat respecteren we natuurlijk volledig. 😊\n\n"
+    "Geen zorgen, we zullen je geen berichten meer sturen.\n\n"
+    "Verander je in de toekomst van gedachten?\n"
+    "Stuur dan simpelweg AANMELDEN en we sturen je opnieuw updates.\n\n"
+    f"🎁 Je kunt nog steeds gebruikmaken van je 10% welkomstkorting.\n\n"
+    f"🛒 Shop hier: {WEBSHOP_LINK}\n\n"
+    "❓ Heb je nog vragen of wil je persoonlijk advies? "
+    "Je kunt ons altijd een WhatsApp-bericht sturen via +31 6 15717980. "
+    "We helpen je graag verder.\n\n"
+    "Veel plezier met shoppen en misschien tot later! 👋"
 )
 
 # =========================================================================
 # STEP 4 — REACTIVATION (customer who said NEE later types AANMELDEN)
 # =========================================================================
 REACTIVATION_REPLY = (
-    "Hey, wat tof dat je er weer bij bent! Vanaf nu zullen we je weer info "
-    "geven, updates sturen en op de hoogte houden van onze nieuwste "
-    "producten en acties. Welkom terug bij de ZiarNutrition community!"
+    "Hey! 👋\n\n"
+    "Wat tof dat je er weer bij bent!\n\n"
+    "Vanaf nu houden we je opnieuw op de hoogte van:\n\n"
+    "💪 Gezonde tips, sportadvies en updates over onze producten\n"
+    "🎁 Exclusieve acties en kortingen\n\n"
+    "Welkom terug bij de ZiarNutrition-community!\n\n"
+    "Fijn dat je weer van de partij bent. 😊"
 )
 
 # =========================================================================
