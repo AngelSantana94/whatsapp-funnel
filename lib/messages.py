@@ -245,3 +245,12 @@ THANK_YOU_PURCHASED = (
     "of het gebruik van je supplementen? Laat het ons gerust weten, we "
     "helpen je graag verder."
 )
+
+# Returning customer with OPT-IN TRUE — skip the cold sales flow entirely
+RETURNING_OPTIN_CUSTOMER = (
+    "Welkom terug! 👋\n\n"
+    "Leuk dat je er weer bent.\n\n"
+    "Bekijk direct onze nieuwste producten en ontdek welke aanbieding "
+    "vandaag het beste bij jou past.\n\n"
+    f"🛒 {WEBSHOP_LINK}"
+)

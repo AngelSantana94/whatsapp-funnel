@@ -99,9 +99,16 @@ def handle_text(wa_id, text_body, referral_source_id, came_via_referral):
         )
         whatsapp.send_text(wa_id, messages.REACTIVATION_REPLY)
         return
+    
+    
 
     subscriber = db.get_subscriber(wa_id)
-
+    
+    # Returning customer who already opted in — send warm welcome, skip sales flow
+    if subscriber and subscriber.get("marketing_opt_in") and is_ad_entry(text_body, came_via_referral):
+        whatsapp.send_text(wa_id, messages.RETURNING_OPTIN_CUSTOMER)
+        return
+    
     # --- New ad visit: first-time customer -----------------------------------
     if subscriber is None:
         if not is_ad_entry(text_body, came_via_referral):
