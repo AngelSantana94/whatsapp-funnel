@@ -21,7 +21,7 @@ DISCOUNT_CODE = "ZIAR10"
 # — never delete old ones, just extend the set.
 # =========================================================================
 AD_ENTRY_MESSAGES = {
-    "Hoi, ik wil graag meer weten over...",
+    "Ja, ik wil mijn korting! 🎁",
 }
 
 # =========================================================================
